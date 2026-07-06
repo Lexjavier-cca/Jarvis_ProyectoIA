@@ -1,0 +1,32 @@
+{
+  "label2id": {
+    "abrir_programa": 0,
+    "agradecimiento": 1,
+    "apagar_pc": 2,
+    "bajar_volumen": 3,
+    "buscar_web": 4,
+    "cambiar_volumen": 5,
+    "despedida": 6,
+    "fallback": 7,
+    "interaccion": 8,
+    "reiniciar_pc": 9,
+    "reproducir_audio": 10,
+    "saludo": 11,
+    "subir_volumen": 12
+  },
+  "id2label": {
+    "0": "abrir_programa",
+    "1": "agradecimiento",
+    "2": "apagar_pc",
+    "3": "bajar_volumen",
+    "4": "buscar_web",
+    "5": "cambiar_volumen",
+    "6": "despedida",
+    "7": "fallback",
+    "8": "interaccion",
+    "9": "reiniciar_pc",
+    "10": "reproducir_audio",
+    "11": "saludo",
+    "12": "subir_volumen"
+  }
+}

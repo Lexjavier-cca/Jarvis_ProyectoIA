@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: #161b22; padding: 20px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #30363d; }
+        .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+        .status-item { background: #21262d; padding: 10px; border-radius: 5px; text-align: center; }
+        .status-item .label { font-size: 12px; color: #8b949e; }
+        .status-item .value { font-size: 18px; font-weight: bold; margin-top: 5px; }
+        .connected { color: #2ea043; }
+        .disconnected { color: #f85149; }
+        .btn { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .btn:hover { background: #2ea043; }
+        .btn-danger { background: #da3633; }
+        .btn-danger:hover { background: #f85149; }
+        .logs { background: #0d1117; padding: 10px; border-radius: 5px; max-height: 200px; overflow-y: auto; font-family: monospace; font-size: 12px; }
+        .log-entry { border-bottom: 1px solid #21262d; padding: 2px 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🎙️ Jarvis Dashboard</h1>
+    <div class="card">
+        <h3>Estado del Sistema</h3>
+        <div class="status-grid" id="statusGrid">
+            <div class="status-item"><div class="label">ESP32</div><div class="value" id="esp32">🔴 Desconectado</div></div>
+            <div class="status-item"><div class="label">Wake Word</div><div class="value" id="wakeword">⏳ Esperando</div></div>
+            <div class="status-item"><div class="label">STT (Whisper)</div><div class="value" id="stt">💤 Inactivo</div></div>
+            <div class="status-item"><div class="label">NLP (BERT)</div><div class="value" id="nlp">💤 Inactivo</div></div>
+            <div class="status-item"><div class="label">TTS (Edge)</div><div class="value" id="tts">💤 Inactivo</div></div>
+            <div class="status-item"><div class="label">Micrófono</div><div class="value" id="mic">🔇 Off</div></div>
+        </div>
+    </div>
+    <div class="card">
+        <h3>Controles</h3>
+        <button class="btn" onclick="testAudio()">🔊 Probar Audio (pitido)</button>
+        <button class="btn btn-danger" onclick="restartESP32()">🔄 Reiniciar ESP32</button>
+        <button class="btn" onclick="fetchStatus()">🔄 Actualizar Estado</button>
+    </div>
+    <div class="card">
+        <h3>Logs en tiempo real</h3>
+        <div class="logs" id="logsContainer">
+            <div class="log-entry">🟢 Sistema iniciado...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function fetchStatus() {
+        try {
+            const res = await fetch('/api/status');
+            const data = await res.json();
+            document.getElementById('esp32').textContent = data.esp32 === 'connected' ? '🟢 Conectado' : '🔴 Desconectado';
+            document.getElementById('esp32').className = 'value ' + (data.esp32 === 'connected' ? 'connected' : 'disconnected');
+            const wakeMap = {'idle': '⏳ Esperando', 'listening': '🎧 Escuchando', 'triggered': '🔊 Activado'};
+            document.getElementById('wakeword').textContent = wakeMap[data.wakeword] || data.wakeword;
+            const sttMap = {'idle': '💤 Inactivo', 'processing': '⏳ Procesando'};
+            document.getElementById('stt').textContent = sttMap[data.stt] || data.stt;
+            const nlpMap = {'idle': '💤 Inactivo', 'processing': '🧠 Pensando'};
+            document.getElementById('nlp').textContent = nlpMap[data.nlp] || data.nlp;
+            const ttsMap = {'idle': '💤 Inactivo', 'generating': '🗣️ Generando', 'sending': '📤 Enviando'};
+            document.getElementById('tts').textContent = ttsMap[data.tts] || data.tts;
+            document.getElementById('mic').textContent = data.mic === 'on' ? '🎤 On' : '🔇 Off';
+        } catch (e) { console.error(e); }
+    }
+    async function testAudio() {
+        addLog('🔊 Enviando pitido de prueba al ESP32...');
+        try {
+            const res = await fetch('/api/test_audio', { method: 'POST' });
+            if (res.ok) addLog('✅ Pitido enviado!');
+            else addLog('❌ Error enviando pitido');
+        } catch (e) { addLog('❌ Error: ' + e.message); }
+    }
+    async function restartESP32() {
+        addLog('🔄 Enviando reinicio al ESP32...');
+        try {
+            const res = await fetch('/api/restart_esp32', { method: 'POST' });
+            if (res.ok) addLog('✅ Comando de reinicio enviado');
+            else addLog('❌ Error enviando reinicio');
+        } catch (e) { addLog('❌ Error: ' + e.message); }
+    }
+    function addLog(msg) {
+        const container = document.getElementById('logsContainer');
+        const entry = document.createElement('div');
+        entry.className = 'log-entry';
+        const time = new Date().toLocaleTimeString();
+        entry.textContent = [\] \;
+        container.prepend(entry);
+        if (container.children.length > 50) container.removeChild(container.lastChild);
+    }
+    setInterval(fetchStatus, 2000);
+    fetchStatus();
+</script>
+</body>
+</html>

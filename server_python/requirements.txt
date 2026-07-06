@@ -1,0 +1,15 @@
+﻿fastapi
+uvicorn[standard]
+websockets
+numpy
+pydub
+edge-tts
+openwakeword
+faster-whisper
+torch
+transformers
+ollama
+pyautogui
+pyaudio
+requests
+python-multipart
