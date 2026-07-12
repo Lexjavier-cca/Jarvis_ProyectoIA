@@ -294,238 +294,53 @@
     }
   },
   {
-    "text": "quiero escuchar música",
+    "text": "lanza spotify",
     "intent": "abrir_programa",
     "entities": {
       "programa": "spotify"
     }
   },
   {
-    "text": "reproduce bohemian rhapsody",
-    "intent": "reproducir_audio",
+    "text": "quiero abrir spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "bohemian rhapsody"
+      "programa": "spotify"
     }
   },
   {
-    "text": "pon bohemian rhapsody",
-    "intent": "reproducir_audio",
+    "text": "me abres spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "bohemian rhapsody"
+      "programa": "spotify"
     }
   },
   {
-    "text": "quiero escuchar bohemian rhapsody",
-    "intent": "reproducir_audio",
+    "text": "puedes abrir spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "bohemian rhapsody"
+      "programa": "spotify"
     }
   },
   {
-    "text": "toca bohemian rhapsody",
-    "intent": "reproducir_audio",
+    "text": "abre la aplicación spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "bohemian rhapsody"
+      "programa": "spotify"
     }
   },
   {
-    "text": "pon una canción de queen",
-    "intent": "reproducir_audio",
+    "text": "inicia la aplicación spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "queen"
+      "programa": "spotify"
     }
   },
   {
-    "text": "quiero escuchar queen",
-    "intent": "reproducir_audio",
+    "text": "abre el programa spotify",
+    "intent": "abrir_programa",
     "entities": {
-      "audio": "queen"
+      "programa": "spotify"
     }
-  },
-  {
-    "text": "pon música de queen",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": "queen"
-    }
-  },
-  {
-    "text": "reproduce hotel california",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": "hotel california"
-    }
-  },
-  {
-    "text": "pon metallica",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": "metallica"
-    }
-  },
-  {
-    "text": "quiero escuchar rock",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": "rock"
-    }
-  },
-  {
-    "text": "sube el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "más volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz el sonido más fuerte",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "sube un poco el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "baja el volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "menos volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "reduce el sonido",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz el volumen más bajo",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "pon el volumen al 20",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 20
-    }
-  },
-  {
-    "text": "pon el volumen al 50",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 50
-    }
-  },
-  {
-    "text": "pon el volumen al 80",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 80
-    }
-  },
-  {
-    "text": "ajusta el volumen al 30 por ciento",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 30
-    }
-  },
-  {
-    "text": "busca python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "googlea python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "investiga python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "busca inteligencia artificial",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "inteligencia artificial"
-    }
-  },
-  {
-    "text": "encuentra información sobre openai",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "openai"
-    }
-  },
-  {
-    "text": "muéstrame información sobre windows 11",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "windows 11"
-    }
-  },
-  {
-    "text": "quiero saber sobre docker",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "docker"
-    }
-  },
-  {
-    "text": "apaga la computadora",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "apaga el ordenador",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "apaga el pc",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "quiero apagar el equipo",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia la computadora",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia windows",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia el sistema",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia el equipo",
-    "intent": "reiniciar_pc",
-    "entities": {}
   },
   {
     "text": "abre opera",
@@ -731,6 +546,230 @@
     }
   },
   {
+    "text": "quiero escribir un documento",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "word"
+    }
+  },
+  {
+    "text": "abre microsoft word",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "word"
+    }
+  },
+  {
+    "text": "necesito word",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "word"
+    }
+  },
+  {
+    "text": "abre el procesador de textos",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "word"
+    }
+  },
+  {
+    "text": "quiero redactar un documento",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "word"
+    }
+  },
+  {
+    "text": "abre excel",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "quiero hacer una hoja de cálculo",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "necesito excel",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "abre microsoft excel",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "quiero trabajar con una hoja de cálculo",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "necesito abrir chrome",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "quiero navegar por internet",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "abre el navegador de google",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "quiero entrar a una página web",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "abre mi navegador",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "inicia el navegador",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "ejecuta el navegador",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "abre una ventana de chrome",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "pon chrome en pantalla",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "quiero usar chrome",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "chrome"
+    }
+  },
+  {
+    "text": "habre spotify",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "spotify"
+    }
+  },
+  {
+    "text": "abrir spotyfi",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "spotify"
+    }
+  },
+  {
+    "text": "reproduce bohemian rhapsody",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "bohemian rhapsody"
+    }
+  },
+  {
+    "text": "pon bohemian rhapsody",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "bohemian rhapsody"
+    }
+  },
+  {
+    "text": "quiero escuchar bohemian rhapsody",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "bohemian rhapsody"
+    }
+  },
+  {
+    "text": "toca bohemian rhapsody",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "bohemian rhapsody"
+    }
+  },
+  {
+    "text": "pon una canción de queen",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "queen"
+    }
+  },
+  {
+    "text": "quiero escuchar queen",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "queen"
+    }
+  },
+  {
+    "text": "pon música de queen",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "queen"
+    }
+  },
+  {
+    "text": "reproduce hotel california",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "hotel california"
+    }
+  },
+  {
+    "text": "pon metallica",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "metallica"
+    }
+  },
+  {
+    "text": "quiero escuchar rock",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "rock"
+    }
+  },
+  {
     "text": "pon imagine",
     "intent": "reproducir_audio",
     "entities": {
@@ -826,275 +865,6 @@
     "intent": "reproducir_audio",
     "entities": {
       "audio": "electrónica"
-    }
-  },
-  {
-    "text": "sube bastante el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "aumenta el sonido",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz que se escuche más",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "pon el audio más fuerte",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "bájale al volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "disminuye el volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "que se escuche menos",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "reduce el audio",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "pon el volumen al 10",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 10
-    }
-  },
-  {
-    "text": "pon el volumen al 25",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 25
-    }
-  },
-  {
-    "text": "pon el volumen al 40",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 40
-    }
-  },
-  {
-    "text": "pon el volumen al 60",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 60
-    }
-  },
-  {
-    "text": "pon el volumen al 75",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 75
-    }
-  },
-  {
-    "text": "pon el volumen al 90",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 90
-    }
-  },
-  {
-    "text": "ajusta el sonido al 35 por ciento",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 35
-    }
-  },
-  {
-    "text": "busca recetas de pizza",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "recetas de pizza"
-    }
-  },
-  {
-    "text": "googlea inteligencia artificial",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "inteligencia artificial"
-    }
-  },
-  {
-    "text": "investiga redes neuronales",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "redes neuronales"
-    }
-  },
-  {
-    "text": "encuentra información sobre linux",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "linux"
-    }
-  },
-  {
-    "text": "quiero saber qué es docker",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "docker"
-    }
-  },
-  {
-    "text": "busca tutoriales de python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "tutoriales de python"
-    }
-  },
-  {
-    "text": "busca imágenes de gatos",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "gatos"
-    }
-  },
-  {
-    "text": "busca vídeos de programación",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "programación"
-    }
-  },
-  {
-    "text": "encuentra noticias de tecnología",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "tecnología"
-    }
-  },
-  {
-    "text": "googlea open source",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "open source"
-    }
-  },
-  {
-    "text": "apaga windows",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "apaga este ordenador",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "quiero apagar la máquina",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "cierra el sistema",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia windows 11",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia mi ordenador",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "vuelve a iniciar el sistema",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "haz un reinicio del equipo",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "abre spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "inicia spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "ejecuta spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "lanza spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "quiero abrir spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "me abres spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "puedes abrir spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "abre la aplicación spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "inicia la aplicación spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "abre el programa spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
     }
   },
   {
@@ -1224,395 +994,6 @@
     }
   },
   {
-    "text": "busca python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "googlea python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "investiga python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "encuentra información sobre python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "necesito información sobre python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "quiero saber qué es python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "búscame python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "haz una búsqueda de python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "consulta información de python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "muéstrame resultados de python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "sube el volumen un poco",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "sube un poquito el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "aumenta el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "más volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz que suene más fuerte",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "baja el volumen un poco",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "reduce el volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "menos volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz que suene más bajo",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "bájale al sonido",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "pon el volumen al 5",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 5
-    }
-  },
-  {
-    "text": "pon el volumen al 15",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 15
-    }
-  },
-  {
-    "text": "pon el volumen al 35",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 35
-    }
-  },
-  {
-    "text": "pon el volumen al 45",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 45
-    }
-  },
-  {
-    "text": "pon el volumen al 55",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 55
-    }
-  },
-  {
-    "text": "pon el volumen al 65",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 65
-    }
-  },
-  {
-    "text": "pon el volumen al 85",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 85
-    }
-  },
-  {
-    "text": "ajusta el volumen al 95 por ciento",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 95
-    }
-  },
-  {
-    "text": "apaga el ordenador",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "quiero apagar el ordenador",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "apaga windows",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "cierra el equipo",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia el ordenador",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia windows",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia el pc",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "vuelve a iniciar el equipo",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "habre spotify",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "abrir spotyfi",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "spotify"
-    }
-  },
-  {
-    "text": "buska python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "pon bolumen al 50",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 50
-    }
-  },
-  {
-    "text": "reinisia la computadora",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "necesito abrir chrome",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "quiero navegar por internet",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "abre el navegador de google",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "quiero entrar a una página web",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "abre mi navegador",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "inicia el navegador",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "ejecuta el navegador",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "abre una ventana de chrome",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "pon chrome en pantalla",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "quiero usar chrome",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "chrome"
-    }
-  },
-  {
-    "text": "quiero escribir un documento",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "word"
-    }
-  },
-  {
-    "text": "abre microsoft word",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "word"
-    }
-  },
-  {
-    "text": "necesito word",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "word"
-    }
-  },
-  {
-    "text": "abre el procesador de textos",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "word"
-    }
-  },
-  {
-    "text": "quiero redactar un documento",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "word"
-    }
-  },
-  {
-    "text": "abre excel",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "excel"
-    }
-  },
-  {
-    "text": "quiero hacer una hoja de cálculo",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "excel"
-    }
-  },
-  {
-    "text": "necesito excel",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "excel"
-    }
-  },
-  {
-    "text": "abre microsoft excel",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "excel"
-    }
-  },
-  {
-    "text": "quiero trabajar con una hoja de cálculo",
-    "intent": "abrir_programa",
-    "entities": {
-      "programa": "excel"
-    }
-  },
-  {
     "text": "quiero escuchar música relajante",
     "intent": "reproducir_audio",
     "entities": {
@@ -1681,211 +1062,6 @@
     "entities": {
       "audio": "rock"
     }
-  },
-  {
-    "text": "busca recetas de pasta",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "recetas de pasta"
-    }
-  },
-  {
-    "text": "investiga inteligencia artificial",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "inteligencia artificial"
-    }
-  },
-  {
-    "text": "googlea openai",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "openai"
-    }
-  },
-  {
-    "text": "quiero información sobre linux",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "linux"
-    }
-  },
-  {
-    "text": "encuentra tutoriales de python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "muéstrame información de docker",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "docker"
-    }
-  },
-  {
-    "text": "búscame noticias de tecnología",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "noticias de tecnología"
-    }
-  },
-  {
-    "text": "necesito saber sobre windows 11",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "windows 11"
-    }
-  },
-  {
-    "text": "quiero aprender python",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "python"
-    }
-  },
-  {
-    "text": "busca información de programación",
-    "intent": "buscar_web",
-    "entities": {
-      "consulta": "programación"
-    }
-  },
-  {
-    "text": "sube bastante el volumen",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "haz que suene mucho más fuerte",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "aumenta bastante el audio",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "quiero escuchar más fuerte",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "incrementa el sonido",
-    "intent": "subir_volumen",
-    "entities": {}
-  },
-  {
-    "text": "baja bastante el volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "reduce mucho el sonido",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "quiero escuchar más bajo",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "disminuye el volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "quita un poco de volumen",
-    "intent": "bajar_volumen",
-    "entities": {}
-  },
-  {
-    "text": "configura el volumen al 70 por ciento",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 70
-    }
-  },
-  {
-    "text": "establece el volumen en 45",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 45
-    }
-  },
-  {
-    "text": "ajusta el audio al 15",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 15
-    }
-  },
-  {
-    "text": "pon el sonido al 100",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 100
-    }
-  },
-  {
-    "text": "deja el volumen en 5",
-    "intent": "cambiar_volumen",
-    "entities": {
-      "nivel": 5
-    }
-  },
-  {
-    "text": "apaga el ordenador ahora",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "quiero apagar windows",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "cierra el sistema operativo",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "apaga mi computadora",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "termina la sesión apagando el equipo",
-    "intent": "apagar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia windows ahora",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia mi pc",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "vuelve a iniciar la computadora",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "haz un reinicio",
-    "intent": "reiniciar_pc",
-    "entities": {}
-  },
-  {
-    "text": "reinicia el ordenador por favor",
-    "intent": "reiniciar_pc",
-    "entities": {}
   },
   {
     "text": "pon despacito",
@@ -2245,76 +1421,6 @@
     }
   },
   {
-    "text": "pon una canción",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "reproduce una canción",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "pon música",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "quiero escuchar música",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "pon cualquier canción",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "pon algo de música",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "toca algo",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "reproduce cualquier cosa",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "quiero oír algo",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
-    "text": "sorpréndeme con una canción",
-    "intent": "reproducir_audio",
-    "entities": {
-      "audio": ""
-    }
-  },
-  {
     "text": "pon mi playlist favorita",
     "intent": "reproducir_audio",
     "entities": {
@@ -2376,6 +1482,768 @@
     "entities": {
       "audio": ""
     }
+  },
+  {
+    "text": "sube el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "más volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz el sonido más fuerte",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "sube un poco el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "sube bastante el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "aumenta el sonido",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz que se escuche más",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "pon el audio más fuerte",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz que suene mucho más fuerte",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "aumenta bastante el audio",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "quiero escuchar más fuerte",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "incrementa el sonido",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "sube el volumen un poco",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "sube un poquito el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "aumenta el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "más volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz que suene más fuerte",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "sube bastante el volumen",
+    "intent": "subir_volumen",
+    "entities": {}
+  },
+  {
+    "text": "baja el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "menos volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "reduce el sonido",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz el volumen más bajo",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "bájale al volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "disminuye el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "que se escuche menos",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "reduce el audio",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "baja bastante el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "reduce mucho el sonido",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "quiero escuchar más bajo",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "disminuye el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "quita un poco de volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "baja el volumen un poco",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "baja un poquito el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "reduce el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "menos volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "haz que suene más bajo",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "bájale al sonido",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "baja bastante el volumen",
+    "intent": "bajar_volumen",
+    "entities": {}
+  },
+  {
+    "text": "pon el volumen al 20",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 20
+    }
+  },
+  {
+    "text": "pon el volumen al 50",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 50
+    }
+  },
+  {
+    "text": "pon el volumen al 80",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 80
+    }
+  },
+  {
+    "text": "ajusta el volumen al 30 por ciento",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 30
+    }
+  },
+  {
+    "text": "pon el volumen al 10",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 10
+    }
+  },
+  {
+    "text": "pon el volumen al 25",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 25
+    }
+  },
+  {
+    "text": "pon el volumen al 40",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 40
+    }
+  },
+  {
+    "text": "pon el volumen al 60",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 60
+    }
+  },
+  {
+    "text": "pon el volumen al 75",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 75
+    }
+  },
+  {
+    "text": "pon el volumen al 90",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 90
+    }
+  },
+  {
+    "text": "ajusta el sonido al 35 por ciento",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 35
+    }
+  },
+  {
+    "text": "pon el volumen al 5",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 5
+    }
+  },
+  {
+    "text": "pon el volumen al 15",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 15
+    }
+  },
+  {
+    "text": "pon el volumen al 35",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 35
+    }
+  },
+  {
+    "text": "pon el volumen al 45",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 45
+    }
+  },
+  {
+    "text": "pon el volumen al 55",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 55
+    }
+  },
+  {
+    "text": "pon el volumen al 65",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 65
+    }
+  },
+  {
+    "text": "pon el volumen al 85",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 85
+    }
+  },
+  {
+    "text": "ajusta el volumen al 95 por ciento",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 95
+    }
+  },
+  {
+    "text": "configura el volumen al 70 por ciento",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 70
+    }
+  },
+  {
+    "text": "establece el volumen en 45",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 45
+    }
+  },
+  {
+    "text": "ajusta el audio al 15",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 15
+    }
+  },
+  {
+    "text": "pon el sonido al 100",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 100
+    }
+  },
+  {
+    "text": "deja el volumen en 5",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 5
+    }
+  },
+  {
+    "text": "pon bolumen al 50",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 50
+    }
+  },
+  {
+    "text": "busca python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "googlea python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "investiga python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "busca inteligencia artificial",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "inteligencia artificial"
+    }
+  },
+  {
+    "text": "encuentra información sobre openai",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "openai"
+    }
+  },
+  {
+    "text": "muéstrame información sobre windows 11",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "windows 11"
+    }
+  },
+  {
+    "text": "quiero saber sobre docker",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "docker"
+    }
+  },
+  {
+    "text": "busca recetas de pizza",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "recetas de pizza"
+    }
+  },
+  {
+    "text": "googlea inteligencia artificial",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "inteligencia artificial"
+    }
+  },
+  {
+    "text": "investiga redes neuronales",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "redes neuronales"
+    }
+  },
+  {
+    "text": "encuentra información sobre linux",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "linux"
+    }
+  },
+  {
+    "text": "quiero saber qué es docker",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "docker"
+    }
+  },
+  {
+    "text": "busca tutoriales de python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "tutoriales de python"
+    }
+  },
+  {
+    "text": "busca imágenes de gatos",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "gatos"
+    }
+  },
+  {
+    "text": "busca vídeos de programación",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "programación"
+    }
+  },
+  {
+    "text": "encuentra noticias de tecnología",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "tecnología"
+    }
+  },
+  {
+    "text": "googlea open source",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "open source"
+    }
+  },
+  {
+    "text": "busca recetas de pasta",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "recetas de pasta"
+    }
+  },
+  {
+    "text": "investiga inteligencia artificial",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "inteligencia artificial"
+    }
+  },
+  {
+    "text": "googlea openai",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "openai"
+    }
+  },
+  {
+    "text": "quiero información sobre linux",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "linux"
+    }
+  },
+  {
+    "text": "encuentra tutoriales de python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "muéstrame información de docker",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "docker"
+    }
+  },
+  {
+    "text": "búscame noticias de tecnología",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "noticias de tecnología"
+    }
+  },
+  {
+    "text": "necesito saber sobre windows 11",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "windows 11"
+    }
+  },
+  {
+    "text": "quiero aprender python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "busca información de programación",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "programación"
+    }
+  },
+  {
+    "text": "buska python",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "python"
+    }
+  },
+  {
+    "text": "busca el clima en madrid",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "clima en madrid"
+    }
+  },
+  {
+    "text": "busca el tiempo en barcelona",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "tiempo en barcelona"
+    }
+  },
+  {
+    "text": "encuentra restaurantes cerca",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "restaurantes cerca"
+    }
+  },
+  {
+    "text": "apaga la computadora",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga el ordenador",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga el pc",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "quiero apagar el equipo",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga windows",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga este ordenador",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "quiero apagar la máquina",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "cierra el sistema",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga el ordenador ahora",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "quiero apagar windows",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "cierra el sistema operativo",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga mi computadora",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "termina la sesión apagando el equipo",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga el ordenador",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "quiero apagar el ordenador",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga windows",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "cierra el equipo",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "apaga el ordenador ahora",
+    "intent": "apagar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia la computadora",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia windows",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia el sistema",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia el equipo",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia windows 11",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia mi ordenador",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "vuelve a iniciar el sistema",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "haz un reinicio del equipo",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia windows ahora",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia mi pc",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "vuelve a iniciar la computadora",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "haz un reinicio",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia el ordenador por favor",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia el ordenador",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia windows",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinicia el pc",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "vuelve a iniciar el equipo",
+    "intent": "reiniciar_pc",
+    "entities": {}
+  },
+  {
+    "text": "reinisia la computadora",
+    "intent": "reiniciar_pc",
+    "entities": {}
   },
   {
     "text": "hola",
@@ -2453,6 +2321,81 @@
     "entities": {}
   },
   {
+    "text": "hola amigo",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "hola qué tal",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "buen día",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "buena semana",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "saludos cordiales",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "qué hay de nuevo",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "hola, ¿cómo va todo?",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "mucho gusto",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "encantado",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "qué más",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "hola a todos",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "buenos días a todos",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "buenas tardes a todos",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "buenas noches a todos",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
+    "text": "hola mundo",
+    "intent": "saludo",
+    "entities": {}
+  },
+  {
     "text": "adiós",
     "intent": "despedida",
     "entities": {}
@@ -2498,6 +2441,56 @@
     "entities": {}
   },
   {
+    "text": "nos vemos luego",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "hasta mañana",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "cuídate",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "chao pescao",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "me voy",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "hasta la próxima",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "nos vemos pronto",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "que tengas buen día",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "que descanses",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
+    "text": "hasta el lunes",
+    "intent": "despedida",
+    "entities": {}
+  },
+  {
     "text": "gracias",
     "intent": "agradecimiento",
     "entities": {}
@@ -2534,6 +2527,36 @@
   },
   {
     "text": "gracias amigo",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "gracias por la ayuda",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "gracias de verdad",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "te lo agradezco mucho",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "gracias por todo",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "muchísimas gracias",
+    "intent": "agradecimiento",
+    "entities": {}
+  },
+  {
+    "text": "gracias por tu tiempo",
     "intent": "agradecimiento",
     "entities": {}
   },
@@ -2578,6 +2601,76 @@
     "entities": {}
   },
   {
+    "text": "cuéntame sobre ti",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué puedes hacer",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "para qué sirves",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "cuáles son tus funciones",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué comandos conoces",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué te hace especial",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "por qué eres útil",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "dime algo interesante",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "cuéntame un chiste",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué hora es",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué día es hoy",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "qué fecha es",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "cuál es la capital de españa",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
+    "text": "cuánto es 2 más 2",
+    "intent": "interaccion",
+    "entities": {}
+  },
+  {
     "text": "no entiendo",
     "intent": "fallback",
     "entities": {}
@@ -2606,5 +2699,990 @@
     "text": "no comprendo",
     "intent": "fallback",
     "entities": {}
+  },
+  {
+    "text": "repítelo por favor",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "no sé qué hacer",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "esto no lo entiendo",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "no te escuché bien",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "puedes repetirlo",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "no entendí eso",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "no te pillé",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué tiempo hace mañana?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuántos años tienes?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Dónde está la biblioteca?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué película me recomiendas?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se dice 'hola' en inglés?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Puedes contarme un chiste?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuál es tu color favorito?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué comes?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Dónde vives?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Tienes hermanos?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué estudiaste?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuál es el mejor libro de la historia?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es el amor?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuánto cuesta esto?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Dónde compraste eso?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué hora es en Japón?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuándo es tu cumpleaños?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué significa la vida?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo funciona el cerebro?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la felicidad?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuál es el sentido de la vida?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Por qué el cielo es azul?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se hace un pastel?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la gravedad?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuándo fue la primera guerra mundial?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Quién inventó el teléfono?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se llama tu creador?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la inteligencia?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se hace el café?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuál es la mejor comida?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Dónde puedo aprender inglés?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la paz?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se escribe correctamente?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la democracia?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuándo empieza la primavera?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Por qué llueve?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se hace un avión?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la electricidad?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuánto pesa un elefante?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Dónde está la luna?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se forman las estrellas?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es la energía?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuánto mide el sol?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se cura un resfriado?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es el ADN?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuándo se descubrió América?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Por qué las plantas son verdes?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cómo se navega en internet?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Qué es el wifi?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "¿Cuánto tiempo dura un día?",
+    "intent": "fallback",
+    "entities": {}
+  },
+  {
+    "text": "abre el editor de código",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "vscode"
+    }
+  },
+  {
+    "text": "inicia el IDE",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "vscode"
+    }
+  },
+  {
+    "text": "ejecuta visual studio",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "vscode"
+    }
+  },
+  {
+    "text": "abre la terminal",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "cmd"
+    }
+  },
+  {
+    "text": "lanza la consola",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "cmd"
+    }
+  },
+  {
+    "text": "necesito editar código",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "vscode"
+    }
+  },
+  {
+    "text": "quiero programar en python",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "vscode"
+    }
+  },
+  {
+    "text": "abre el explorador de archivos",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "explorador"
+    }
+  },
+  {
+    "text": "abre el administrador de tareas",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "taskmgr"
+    }
+  },
+  {
+    "text": "lanza el editor de texto",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "notepad"
+    }
+  },
+  {
+    "text": "abre el bloc de notas",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "notepad"
+    }
+  },
+  {
+    "text": "ejecuta el editor",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "notepad"
+    }
+  },
+  {
+    "text": "abre la calculadora",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "calculadora"
+    }
+  },
+  {
+    "text": "abre la consola",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "cmd"
+    }
+  },
+  {
+    "text": "inicia la terminal de comandos",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "cmd"
+    }
+  },
+  {
+    "text": "abre el editor de imágenes",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "photoshop"
+    }
+  },
+  {
+    "text": "lanza el programa de dibujo",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "photoshop"
+    }
+  },
+  {
+    "text": "necesito diseñar un logo",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "illustrator"
+    }
+  },
+  {
+    "text": "quiero hacer un video",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "premiere pro"
+    }
+  },
+  {
+    "text": "abre el programa de video",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "premiere pro"
+    }
+  },
+  {
+    "text": "necesito modelar en 3d",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "blender"
+    }
+  },
+  {
+    "text": "abre el modelador 3d",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "blender"
+    }
+  },
+  {
+    "text": "quiero grabar la pantalla",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "obs"
+    }
+  },
+  {
+    "text": "abre el programa de grabación",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "obs"
+    }
+  },
+  {
+    "text": "abre el reproductor de música",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "spotify"
+    }
+  },
+  {
+    "text": "lanza el chat de voz",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "discord"
+    }
+  },
+  {
+    "text": "abre el programa de mensajes",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "telegram"
+    }
+  },
+  {
+    "text": "inicia la aplicación de reuniones",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "zoom"
+    }
+  },
+  {
+    "text": "abre el editor de hojas de cálculo",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "excel"
+    }
+  },
+  {
+    "text": "quiero hacer una presentación",
+    "intent": "abrir_programa",
+    "entities": {
+      "programa": "powerpoint"
+    }
+  },
+  {
+    "text": "quiero oír algo de rock",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "rock"
+    }
+  },
+  {
+    "text": "ponme un poco de jazz",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "jazz"
+    }
+  },
+  {
+    "text": "me apetece escuchar música clásica",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música clásica"
+    }
+  },
+  {
+    "text": "quiero ambientarme con música",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "pon algo que suene bien",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "reproduce mi canción favorita",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "toca una canción de Queen",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "queen"
+    }
+  },
+  {
+    "text": "pon el último disco de Metallica",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "metallica"
+    }
+  },
+  {
+    "text": "qué música me recomiendas",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "necesito música para estudiar",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "pon algo de salsa",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "salsa"
+    }
+  },
+  {
+    "text": "quiero bailar con música electrónica",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "electrónica"
+    }
+  },
+  {
+    "text": "pon música para hacer ejercicio",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "reproduce una playlist de motivación",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "playlist de motivación"
+    }
+  },
+  {
+    "text": "quiero escuchar algo romántico",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "romántico"
+    }
+  },
+  {
+    "text": "pon música de los 80",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música de los 80"
+    }
+  },
+  {
+    "text": "reproduce música de los 90",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música de los 90"
+    }
+  },
+  {
+    "text": "pon canciones de los 2000",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música de los 2000"
+    }
+  },
+  {
+    "text": "quiero oír reggae",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "reggae"
+    }
+  },
+  {
+    "text": "pon música para dormir",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música para dormir"
+    }
+  },
+  {
+    "text": "reproduce algo tranquilo para relajarme",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "música relajante"
+    }
+  },
+  {
+    "text": "quiero escuchar un podcast",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "podcast"
+    }
+  },
+  {
+    "text": "pon el audio del último video",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "reproduce el tema principal de Titanic",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "titanic"
+    }
+  },
+  {
+    "text": "quiero oír la banda sonora de Star Wars",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "star wars"
+    }
+  },
+  {
+    "text": "pon la música de los Simpson",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "los simpson"
+    }
+  },
+  {
+    "text": "reproduce la canción de moda",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "quiero escuchar el último lanzamiento",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "pon la canción más escuchada",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": ""
+    }
+  },
+  {
+    "text": "reproduce el álbum completo de Queen",
+    "intent": "reproducir_audio",
+    "entities": {
+      "audio": "queen"
+    }
+  },
+  {
+    "text": "qué es el cambio climático",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "cambio climático"
+    }
+  },
+  {
+    "text": "necesito información sobre la IA",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "inteligencia artificial"
+    }
+  },
+  {
+    "text": "busca el precio del dólar",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "precio del dólar"
+    }
+  },
+  {
+    "text": "cuál es la capital de Colombia",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "capital de Colombia"
+    }
+  },
+  {
+    "text": "quiero saber sobre la historia de Roma",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "historia de Roma"
+    }
+  },
+  {
+    "text": "dame una definición de amor",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "definición de amor"
+    }
+  },
+  {
+    "text": "qué significa 'procrastinar'",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "significado de procrastinar"
+    }
+  },
+  {
+    "text": "cómo se escribe 'excelente'",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "cómo se escribe excelente"
+    }
+  },
+  {
+    "text": "cuánto pesa la Tierra",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "peso de la Tierra"
+    }
+  },
+  {
+    "text": "quién fue Einstein",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "Albert Einstein"
+    }
+  },
+  {
+    "text": "cuál es la mejor película de ciencia ficción",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "mejores películas de ciencia ficción"
+    }
+  },
+  {
+    "text": "busca el clima en Buenos Aires",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "clima en Buenos Aires"
+    }
+  },
+  {
+    "text": "cuánto cuesta un iphone",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "precio iPhone"
+    }
+  },
+  {
+    "text": "dónde está la torre eiffel",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "Torre Eiffel ubicación"
+    }
+  },
+  {
+    "text": "qué es el agujero negro",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "agujero negro"
+    }
+  },
+  {
+    "text": "cómo se hace un algoritmo",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "algoritmo"
+    }
+  },
+  {
+    "text": "quién ganó el mundial 2022",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "mundial 2022"
+    }
+  },
+  {
+    "text": "qué es la fotosíntesis",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "fotosíntesis"
+    }
+  },
+  {
+    "text": "cuándo es el próximo eclipse",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "próximo eclipse"
+    }
+  },
+  {
+    "text": "dónde comprar un libro",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "comprar libros"
+    }
+  },
+  {
+    "text": "cómo se llama el presidente de México",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "presidente de México"
+    }
+  },
+  {
+    "text": "qué es la inteligencia emocional",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "inteligencia emocional"
+    }
+  },
+  {
+    "text": "busca imágenes de paisajes",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "paisajes"
+    }
+  },
+  {
+    "text": "cuál es la mejor universidad de España",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "mejores universidades España"
+    }
+  },
+  {
+    "text": "qué es la nanotecnología",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "nanotecnología"
+    }
+  },
+  {
+    "text": "cómo funciona la energía solar",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "energía solar"
+    }
+  },
+  {
+    "text": "quién escribió Don Quijote",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "Don Quijote"
+    }
+  },
+  {
+    "text": "cuándo fue la independencia de México",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "independencia de México"
+    }
+  },
+  {
+    "text": "busca recetas de pasta",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "recetas de pasta"
+    }
+  },
+  {
+    "text": "qué es el metaverso",
+    "intent": "buscar_web",
+    "entities": {
+      "consulta": "metaverso"
+    }
+  },
+  {
+    "text": "pon el volumen al mínimo",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
+  },
+  {
+    "text": "pon el volumen al 0",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
+  },
+  {
+    "text": "silencia el volumen",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
+  },
+  {
+    "text": "baja el volumen al 2",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 2
+    }
+  },
+  {
+    "text": "pon el volumen al 3",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 3
+    }
+  },
+  {
+    "text": "deja el volumen al mínimo",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
+  },
+  {
+    "text": "pónlo al 1",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 1
+    }
+  },
+  {
+    "text": "pon el volumen al 4",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 4
+    }
+  },
+  {
+    "text": "baja al mínimo el volumen",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
+  },
+  {
+    "text": "silencio total",
+    "intent": "cambiar_volumen",
+    "entities": {
+      "nivel": 0
+    }
   }
 ]
