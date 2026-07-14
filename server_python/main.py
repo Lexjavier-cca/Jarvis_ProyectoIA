@@ -32,7 +32,7 @@ from websocket.manager import ws_manager
 # ============================================================================
 # CONFIGURACION
 # ============================================================================
-ESP32_IP = "192.168.100.149"          # CAMBIA POR LA IP DE TU ESP32
+ESP32_IP = "192.168.137.138"          # CAMBIA POR LA IP DE TU ESP32
 ESP32_PORT = 8765
 main_event_loop = None
 pending_confirmation = None  # {"action": "shutdown"} o None
@@ -65,7 +65,7 @@ MUSIC_FOLDER = "MUSIC"
 # INICIALIZACION DE MODULOS
 # ============================================================================
 print("Inicializando modulos...")
-wakeword = WakeWordDetector(keyword="jarvisgit ")
+wakeword = WakeWordDetector(keyword="jarvis")
 stt = SpeechToText()
 tts = TextToSpeech(voice="es-AR-TomasNeural", use_rvc=False)
 nlp = IntentClassifier(model_path="core/bert_intent_model")
