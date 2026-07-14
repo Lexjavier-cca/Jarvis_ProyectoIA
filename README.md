@@ -165,6 +165,8 @@ Puedes usar el micrófono de tu laptop directamente. El sistema está configurad
 - La primera vez que hablas, el sistema tarda un poco en cargar los modelos de inteligencia artificial. Después va más rápido.
 - Asegúrate de que tu laptop y el ESP32 estén en la misma red WiFi.
 - Los audios de la microSD deben estar en formato MP3, mono o estéreo, 44.1 kHz, 128 kbps o similar.
+- Se debe descargar bert_intent_model para que el programa funcione, el link es el siguiente:
+- https://drive.google.com/file/d/19lq0jfvebWq5tvGIbfsSOZpmEwviV9S3/view?usp=sharing
 
 ---
 
