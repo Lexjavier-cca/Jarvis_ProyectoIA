@@ -32,7 +32,7 @@ from websocket.manager import ws_manager
 # ============================================================================
 # CONFIGURACION
 # ============================================================================
-ESP32_IP = "192.168.100.24"          # CAMBIA POR LA IP DE TU ESP32
+ESP32_IP = "192.168.100.149"          # CAMBIA POR LA IP DE TU ESP32
 ESP32_PORT = 8765
 main_event_loop = None
 pending_confirmation = None  # {"action": "shutdown"} o None
@@ -65,7 +65,7 @@ MUSIC_FOLDER = "MUSIC"
 # INICIALIZACION DE MODULOS
 # ============================================================================
 print("Inicializando modulos...")
-wakeword = WakeWordDetector(keyword="jarvis")
+wakeword = WakeWordDetector(keyword="jarvisgit ")
 stt = SpeechToText()
 tts = TextToSpeech(voice="es-AR-TomasNeural", use_rvc=False)
 nlp = IntentClassifier(model_path="core/bert_intent_model")
@@ -336,6 +336,28 @@ async def process_audio_command(websocket, audio_bytes, sample_rate):
             "type": "transcription",
             "text": text
         }))
+        frases_habilidad = [
+            'que sabes hacer', 'qué sabes hacer', 
+            'que puedes hacer', 'qué puedes hacer',
+            'tus habilidades', 'que haces', 'qué haces',
+            'para que sirves', 'para qué sirves'
+        ]
+        if any(frase in text.lower() for frase in frases_habilidad):
+            print("🎯 Detectado 'qué sabes hacer' → forzando acción listar_habilidades")
+            # Creamos un intent falso
+            intent_falso = {
+                "type": "action",
+                "action": "listar_habilidades",
+                "params": {},
+                "intent_name": "listar_habilidades"
+            }
+            response_text = execute_action(intent_falso)
+            await websocket.send_text(json.dumps({
+                "type": "response",
+                "text": response_text,
+                "intent": "listar_habilidades"
+            }))
+            return  # Salimos, no procesamos más
 
         # === VERIFICAR CONFIRMACIÓN PENDIENTE ===
         if pending_confirmation:
@@ -441,6 +463,27 @@ def on_wakeword_detected():
         return
 
     print(f"Transcripcion: {text}")
+    frases_habilidad = [
+        'que sabes hacer', 'qué sabes hacer', 
+        'que puedes hacer', 'qué puedes hacer',
+        'tus habilidades', 'que haces', 'qué haces',
+        'para que sirves', 'para qué sirves'
+    ]
+    if any(frase in text.lower() for frase in frases_habilidad):
+        print("🎯 Detectado 'qué sabes hacer' → forzando acción listar_habilidades")
+        intent_falso = {
+            "type": "action",
+            "action": "listar_habilidades",
+            "params": {},
+            "intent_name": "listar_habilidades"
+        }
+        response_text = execute_action(intent_falso)
+        print(f"Respondiendo: {response_text}")
+        # No reproducimos audio aquí porque ya lo hará execute_action
+        system_status["wakeword"] = "listening"
+        system_status["stt"] = "idle"
+        system_status["mic"] = "off"
+        return  # Salimos
     system_status["stt"] = "processing"
 
     # === VERIFICAR CONFIRMACIÓN PENDIENTE ===
@@ -503,7 +546,35 @@ def execute_action(intent):
     action = intent["action"]
     params = intent.get("params", {})
     print(f"⚡ Ejecutando acción: {action} con parámetros {params}")
-
+    # ========== NUEVA ACCIÓN: LISTAR HABILIDADES ==========
+    if action == "listar_habilidades":
+        # Audio que quieres reproducir (debe estar en la carpeta AUDIO del ESP32)
+        audio_file = "010.mp3"   # Cambia por el nombre de tu archivo
+        # También puedes enviar un texto de respuesta
+        mensaje = "Reproduciendo mis habilidades..."
+        # Reproducir el audio en el ESP32
+        if ws_manager.connected:
+            send_esp32_command_safe({
+                "action": "PLAY_AUDIO",
+                "folder": "AUDIO",   # Asegúrate de que la carpeta existe en la SD
+                "file": audio_file
+            })
+        else:
+            # Fallback: si no hay ESP32, podrías reproducir localmente o con TTS
+            print("ESP32 no conectado, no se pudo reproducir el audio.")
+        return mensaje
+    # =====================================================
+ 
+    # ========== FUNCIÓN AUXILIAR PARA REPRODUCIR AUDIO DE CONFIRMACIÓN ==========
+    def reproducir_audio_confirmacion(file):
+        if ws_manager.connected and file:
+            send_esp32_command_safe({
+                "action": "PLAY_AUDIO",
+                "folder": "AUDIO",
+                "file": file
+            })
+ 
+    # ========== ACCIONES ==========
     if action == "open_app":
         app_name = params.get("app", "")
         app_action = params.get("app_action", "open")
@@ -515,51 +586,59 @@ def execute_action(intent):
                 return f"No pude cerrar {app_name}"
         else:
             if controller.open_app(app_name):
+                reproducir_audio_confirmacion("013.mp3")  # Abrir programa
                 return f"Abriendo {app_name}"
             else:
                 return f"No pude encontrar {app_name}"
-
-    elif action == "close_app":  # Por si se detecta directamente
+ 
+    elif action == "close_app":
         app_name = params.get("app", "")
         controller.close_app(app_name)
         return f"Cerrando {app_name}"
-
+ 
     elif action == "volume_up":
         controller.volume_up()
         if ws_manager.connected:
             send_esp32_command_safe({"action": "MUSIC_VOLUME", "volume": 25})
+        reproducir_audio_confirmacion("006.mp3")  # Subir volumen
         return "Subiendo volumen"
-
+ 
     elif action == "volume_down":
         controller.volume_down()
         if ws_manager.connected:
             send_esp32_command_safe({"action": "MUSIC_VOLUME", "volume": 15})
+        reproducir_audio_confirmacion("005.mp3")  # Bajar volumen
         return "Bajando volumen"
-
+ 
     elif action == "set_volume":
         level = params.get("level", 50)
         if ws_manager.connected:
             send_esp32_command_safe({"action": "MUSIC_VOLUME", "volume": level})
+        reproducir_audio_confirmacion("008.mp3")  # Cambiar volumen
         return f"Volumen ajustado al {level}%"
-
+ 
     elif action == "search_web":
         consulta = params.get("consulta", "busqueda")
         query = urllib.parse.quote(consulta)
         webbrowser.open(f"https://www.google.com/search?q={query}")
+        reproducir_audio_confirmacion("007.mp3")  # Buscar web
         return f"Buscando '{consulta}' en Google"
-
+ 
     elif action == "shutdown":
         print("⚠️ Comando de apagado recibido. Pidiendo confirmación...")
         pending_confirmation = {"action": "shutdown"}
+        # No reproducir audio aún, esperar confirmación
         return "¿Seguro que quieres apagar el equipo? Di 'Sí, apaga' para confirmar."
-
+ 
     elif action == "restart":
         controller.restart()
+        reproducir_audio_confirmacion("011.mp3")  # Reiniciar PC
         return "Reiniciando el equipo en 5 segundos"
-
+ 
     elif action == "music":
         query = params.get("query", "").strip()
         print(f"🎵 Búsqueda musical: '{query}'")
+        # Si contiene "spotify", abrir Spotify directamente
         if "spotify" in query.lower():
             webbrowser.open("https://open.spotify.com")
             return "Abriendo Spotify"
@@ -591,7 +670,7 @@ def execute_action(intent):
         else:
             webbrowser.open(f"https://open.spotify.com/search/{urllib.parse.quote(query)}")
             return f"No encontré '{query}' en mi biblioteca. Abriendo Spotify para buscarlo."
-
+ 
     else:
         return f"No se como ejecutar {action}"
 

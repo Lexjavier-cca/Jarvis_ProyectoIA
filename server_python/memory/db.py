@@ -2,14 +2,14 @@
 import json
 import os
 import re
-
+ 
 DB_PATH = os.path.join(os.path.dirname(__file__), "jarvis.db")
-
+ 
 class DBManager:
     def __init__(self):
         self.init_db()
         self.init_songs_table()
-
+ 
     def init_db(self):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -34,7 +34,7 @@ class DBManager:
         )''')
         conn.commit()
         conn.close()
-
+ 
     def init_songs_table(self):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -49,14 +49,13 @@ class DBManager:
         c.execute('CREATE INDEX IF NOT EXISTS idx_songs_title ON songs (title)')
         c.execute('CREATE INDEX IF NOT EXISTS idx_songs_artist ON songs (artist)')
         c.execute('CREATE INDEX IF NOT EXISTS idx_songs_filename ON songs (filename)')
-
-        # Insertar datos si la tabla está vacía
+ 
         c.execute('SELECT COUNT(*) FROM songs')
         if c.fetchone()[0] == 0:
             self._insert_song_data(c)
         conn.commit()
         conn.close()
-
+ 
     def _insert_song_data(self, cursor):
         songs_data = [
             ('001.mp3', 'Wonderwall', 'Oasis'),
@@ -169,52 +168,116 @@ class DBManager:
             'INSERT INTO songs (filename, title, artist) VALUES (?, ?, ?)',
             songs_data
         )
-
+ 
     # ========== MÉTODOS DE BÚSQUEDA DE CANCIONES ==========
     def _normalize_query(self, query):
-        """Limpia la consulta eliminando palabras comunes que son errores de transcripción."""
+        """
+        Normaliza la consulta para mejorar la búsqueda:
+        - Minúsculas
+        - Elimina errores comunes de transcripción
+        - Elimina verbos y palabras de parada
+        - Normaliza acentos
+        """
         if not query:
             return ""
+        import re
+        # 1. Convertir a minúsculas
         query_lower = query.lower().strip()
-        # Palabras que se deben eliminar completamente (verbos, muletillas, errores)
-        palabras_eliminar = [
-            'pon', 'reproduce', 'toca', 'escuchar', 'quiero', 'poner', 
-            'reproducir', 'musica', 'cancion', 'ponme', 'coloca', 'pasa',
-            'de', 'la', 'el', 'los', 'las', 'un', 'una', 'algo', 'una', 
-            'por', 'favor', 'favor',
+        # 2. Eliminar errores comunes de transcripción (palabras completas)
+        errores_transcripcion = [
             'bon', 'don', 'on', 'buen', 'bom', 'dom', 'om', 'bem',
-            'als', 'allas'
+            'als', 'allas', 'asís', 'asis', 'acis', 'ocis',
+            'pon', 'reproduce', 'toca', 'escuchar', 'quiero', 'poner',
+            'reproducir', 'musica', 'cancion', 'ponme', 'coloca', 'pasa',
+            'de', 'la', 'el', 'los', 'las', 'un', 'una', 'algo', 'una',
+            'por', 'favor', 'favor', 'porfavor', 'gracias'
         ]
-        # Usar regex para eliminar solo palabras completas
-        for palabra in palabras_eliminar:
+        for palabra in errores_transcripcion:
             patron = r'\b' + re.escape(palabra) + r'\b'
             query_lower = re.sub(patron, '', query_lower)
-        # Eliminar signos de puntuación y espacios extra
+        # 3. Normalizar acentos
+        acentos = {
+            'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
+            'Á': 'a', 'É': 'e', 'Í': 'i', 'Ó': 'o', 'Ú': 'u',
+            'ü': 'u', 'Ü': 'u', 'ñ': 'n', 'Ñ': 'n'
+        }
+        for acento, normal in acentos.items():
+            query_lower = query_lower.replace(acento, normal)
+        # 4. Eliminar signos de puntuación y caracteres especiales
         query_lower = re.sub(r'[^\w\s]', '', query_lower)
+        # 5. Eliminar espacios extra
         query_lower = ' '.join(query_lower.split())
+        # 6. Si quedó vacío, devolver la consulta original limpia
+        if not query_lower:
+            # Intentar con la consulta original pero eliminando solo lo mínimo
+            query_lower = query.lower().strip()
+            for palabra in errores_transcripcion[:10]:
+                query_lower = query_lower.replace(palabra, '').strip()
+            query_lower = re.sub(r'[^\w\s]', '', query_lower)
+            query_lower = ' '.join(query_lower.split())
         return query_lower
-
+ 
     def search_songs(self, query):
+        """
+        Búsqueda mejorada de canciones con:
+        - Normalización de texto (acentos, mayúsculas)
+        - Eliminación de palabras comunes
+        - Búsqueda por palabras individuales
+        - Coincidencia flexible
+        - Priorización por relevancia
+        """
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
         # Normalizar la consulta
-        query_lower = self._normalize_query(query)
-        
-        # Si después de limpiar queda vacío, buscar por el query original
-        if not query_lower:
-            query_lower = query.lower().strip()
-        
-        # Buscar por coincidencia parcial en título o artista
-        q = f'%{query_lower}%'
+        query_limpia = self._normalize_query(query)
+        print(f"🔎 Consulta original: '{query}' → Normalizada: '{query_limpia}'")
+        if not query_limpia:
+            conn.close()
+            return []
+        # Intentar búsqueda exacta por título o artista con priorización
+        q = f'%{query_limpia}%'
         c.execute('''
             SELECT filename, title, artist FROM songs
             WHERE LOWER(title) LIKE ? OR LOWER(artist) LIKE ?
-            ORDER BY title
-        ''', (q, q))
+            ORDER BY
+                CASE 
+                    WHEN LOWER(title) = ? THEN 1
+                    WHEN LOWER(artist) = ? THEN 2
+                    WHEN LOWER(title) LIKE ? THEN 3
+                    WHEN LOWER(artist) LIKE ? THEN 4
+                    ELSE 5
+                END
+            LIMIT 5
+        ''', (q, q, query_limpia, query_limpia, q, q))
         rows = c.fetchall()
         conn.close()
-        return [{'filename': r[0], 'title': r[1], 'artist': r[2]} for r in rows]
-
+        if rows:
+            resultados = [{'filename': r[0], 'title': r[1], 'artist': r[2]} for r in rows]
+            print(f"✅ Encontrados {len(resultados)} resultados")
+            return resultados
+        # Si no hay resultados, buscar por palabras individuales
+        print("🔍 Sin resultados exactos, buscando por partes...")
+        palabras = query_limpia.split()
+        for palabra in palabras:
+            if len(palabra) > 2:
+                q = f'%{palabra}%'
+                conn = sqlite3.connect(DB_PATH)
+                c = conn.cursor()
+                c.execute('''
+                    SELECT filename, title, artist FROM songs
+                    WHERE LOWER(title) LIKE ? OR LOWER(artist) LIKE ?
+                    ORDER BY title
+                    LIMIT 5
+                ''', (q, q))
+                rows = c.fetchall()
+                conn.close()
+                if rows:
+                    resultados = [{'filename': r[0], 'title': r[1], 'artist': r[2]} for r in rows]
+                    print(f"✅ Encontrados por palabra '{palabra}': {len(resultados)} resultados")
+                    return resultados
+        print("❌ No se encontraron canciones")
+        return []
+ 
     def get_random_song(self):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -224,7 +287,7 @@ class DBManager:
         if row:
             return {'filename': row[0], 'title': row[1], 'artist': row[2]}
         return None
-
+ 
     # === Métodos existentes ===
     def add_history(self, user_input, bot_response, intent):
         conn = sqlite3.connect(DB_PATH)
@@ -233,7 +296,7 @@ class DBManager:
                   (user_input, bot_response, intent))
         conn.commit()
         conn.close()
-
+ 
     def get_history(self, limit=20):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -241,7 +304,7 @@ class DBManager:
         rows = c.fetchall()
         conn.close()
         return rows
-
+ 
     def add_device(self, name, ip, port, type="esp32", status="active"):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -249,7 +312,7 @@ class DBManager:
                   (name, ip, port, type, status))
         conn.commit()
         conn.close()
-
+ 
     def get_devices(self):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -257,7 +320,7 @@ class DBManager:
         rows = c.fetchall()
         conn.close()
         return rows
-
+ 
     def get_setting(self, key, default=None):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
@@ -265,7 +328,7 @@ class DBManager:
         row = c.fetchone()
         conn.close()
         return row[0] if row else default
-
+ 
     def set_setting(self, key, value):
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()

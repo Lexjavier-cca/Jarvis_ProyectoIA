@@ -124,23 +124,19 @@ class IntentClassifier:
                     entidades["app"] = "excel"
         
         elif intent == "reproducir_audio":
+            # Eliminar verbos y palabras comunes
             texto_limpio = texto_lower
             palabras_eliminar = [
-                'pon', 'reproduce', 'toca', 'escuchar', 'quiero', 'poner', 
+                'pon', 'reproduce', 'toca', 'escuchar', 'quiero', 'poner',
                 'reproducir', 'musica', 'cancion', 'ponme', 'coloca', 'pasa',
-                'de', 'la', 'el', 'los', 'las', 'un', 'una', 'algo', 'una', 
-                'por', 'favor', 'favor'
+                'de', 'la', 'el', 'los', 'las', 'un', 'una', 'algo', 'una',
+                'por', 'favor', 'favor', 'gracias'
             ]
-            errores_comunes = ['bon', 'don', 'on', 'buen', 'bom', 'dom', 'om', 'bem']
-            todas_a_eliminar = palabras_eliminar + errores_comunes
-            
-            for palabra in todas_a_eliminar:
+            for palabra in palabras_eliminar:
                 patron = r'\b' + re.escape(palabra) + r'\b'
                 texto_limpio = re.sub(patron, '', texto_limpio)
-            
             texto_limpio = re.sub(r'[^\w\s]', '', texto_limpio)
             texto_limpio = ' '.join(texto_limpio.split())
-            
             if texto_limpio:
                 entidades["query"] = texto_limpio
             else:
